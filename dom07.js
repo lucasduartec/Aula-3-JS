@@ -5,7 +5,8 @@ const eSpans = document.querySelectorAll("span");
 
 const eA = eSpans[0];
 const eB = eSpans[1];
-const eC = eSpans[2];
+const eC = eSpans[3];
+const eSymbol = eSpans[2];
 
 const eButtons = document.querySelectorAll("button");
 const eButtonSoma = eButtons[0];
@@ -29,6 +30,7 @@ function soma() {
   const A = Number(eA.textContent);
   const B = Number(eB.textContent);
   const C = A + B;
+  eSymbol.textContent = "+";
   eC.textContent = C;
 }
 
@@ -36,5 +38,6 @@ function multiplica() {
   const A = Number(eA.textContent);
   const B = Number(eB.textContent);
   const C = A * B;
+  eSymbol.textContent = "*";
   eC.textContent = C;
 }
