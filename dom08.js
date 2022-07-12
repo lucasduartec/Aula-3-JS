@@ -20,22 +20,19 @@ function sorteiaValor() {
 
 function ehParListener(event) {
   console.log("É par!");
-  criaElemento(true);
+  criaElemento(eParList);
 }
 
 function ehImparListener(event) {
   console.log("É ímpar!");
-  criaElemento(false);
+  criaElemento(eImparList);
 }
 
-function criaElemento(ehPar) {
+function criaElemento(lista) {
   const eLi = document.createElement("li");
   eLi.textContent = eValor.textContent;
 
-  if (ehPar === true) {
-    eParList.appendChild(eLi);
-  } else {
-    eImparList.appendChild(eLi);
-  }
+  lista.appendChild(eLi);
+
   sorteiaValor();
 }
